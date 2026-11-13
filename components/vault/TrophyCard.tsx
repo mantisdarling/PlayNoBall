@@ -2,7 +2,9 @@
  * TrophyCard displays a single unlocked ball in the Trophy Vault.
  * It shows the ball name, tournament, year, and a rotatable 3D preview.
  */
+"use client"
 import { Canvas } from "@react-three/fiber"
+import { useEffect, useState } from "react"
 import { BallCanvas } from "@/components/ui/BallCanvas"
 import type { BallMetadata } from "@/types/ball"
 
@@ -11,6 +13,11 @@ interface TrophyCardProps {
 }
 
 export function TrophyCard({ ball }: TrophyCardProps) {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <div className="bg-surface border border-white/10 rounded-xl p-4 hover:border-accent/50 transition-colors cursor-pointer group">
@@ -26,9 +33,11 @@ export function TrophyCard({ ball }: TrophyCardProps) {
         {ball.tournament}
       </div>
       <div className="w-32 h-32 bg-dark rounded-lg flex items-center justify-center overflow-hidden relative border border-white/5">
-        <Canvas className="w-full h-full">
-          <BallCanvas ball={ball} isSpinning={false} />
-        </Canvas>
+        {isMounted && (
+          <Canvas className="w-full h-full">
+            <BallCanvas ball={ball} isSpinning={false} />
+          </Canvas>
+        )}
       </div>
       <div className="mt-3 text-xs text-green-400 font-mono uppercase tracking-widest">
         unlocked xp {ball.unlockXP}

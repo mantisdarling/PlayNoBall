@@ -106,7 +106,7 @@ export function AutocompleteInput({ catalog, onGuess }: AutocompleteInputProps) 
               }}
               className="p-2 rounded text-sm text-white hover:bg-white/10 cursor-pointer"
             >
-              {ball.name} — {ball.tournament} {ball.year}
+              {ball.name} {ball.tournament} {ball.year}
             </div>
           ))}
         </div>

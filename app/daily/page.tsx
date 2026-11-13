@@ -3,9 +3,10 @@
  * One ball per day with a consistent seed. Players get one attempt per day.
  * Connects to useDailySeed useGameLogic useAutocomplete and BallSpawner.
  */
+"use client"
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { BallStage } from "@/components/game/BallStage"
+import dynamic from "next/dynamic"
 import { HUDOverlay } from "@/components/ui/HUDOverlay"
 import { ComboStreak } from "@/components/ui/ComboStreak"
 import { AutocompleteInput } from "@/components/ui/AutocompleteInput"
@@ -16,6 +17,11 @@ import { BALLS_CATALOG } from "@/data/balls"
 import { audioEngine } from "@/lib/audio"
 import type { GameState } from "@/types/game"
 import type { BallMetadata } from "@/types/ball"
+
+const BallStage = dynamic(
+  () => import("@/components/game/BallStage").then((mod) => mod.BallStage),
+  { ssr: false },
+)
 
 export default function DailyPage() {
   const logic = useGameLogic()

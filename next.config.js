@@ -3,9 +3,8 @@
  * Sets Content Security Policy headers and image domains.
  * No build output customization needed for static deployment.
  */
-import type { NextConfig } from "next"
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [],
@@ -48,4 +47,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig
+module.exports = nextConfig

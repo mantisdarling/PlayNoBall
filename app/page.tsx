@@ -3,6 +3,7 @@
  * Displays the game title mode selector and entry point to both game modes.
  * Broadcast sports analytics theme with zero hyphens in any visible text.
  */
+"use client"
 import Link from "next/link"
 import { useState } from "react"
 import { ModeToggle } from "@/components/ui/ModeToggle"

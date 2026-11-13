@@ -3,6 +3,7 @@
  * It connects to useTrophyVault for localStorage persistence and renders
  * each unlocked ball as a rotatable TrophyCard in a responsive grid.
  */
+"use client"
 import { useEffect, useState } from "react"
 import { useTrophyVault } from "@/hooks/useTrophyVault"
 import { BALLS_CATALOG } from "@/data/balls"

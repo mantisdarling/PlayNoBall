@@ -3,6 +3,7 @@
  * It provides the WebGL rendering context required for 3D content.
  * The canvas resizes responsively to fit its container.
  */
+"use client"
 import { Canvas } from "@react-three/fiber"
 import { BallSpawner } from "./BallSpawner"
 import type { BallMetadata } from "@/types/ball"
