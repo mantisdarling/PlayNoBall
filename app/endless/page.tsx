@@ -5,7 +5,7 @@
  */
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { BallSpawner } from "@/components/game/BallSpawner"
+import { BallStage } from "@/components/game/BallStage"
 import { HUDOverlay } from "@/components/ui/HUDOverlay"
 import { ComboStreak } from "@/components/ui/ComboStreak"
 import { AutocompleteInput } from "@/components/ui/AutocompleteInput"
@@ -64,8 +64,13 @@ export default function EndlessPage() {
         <Link href="/" className="text-sm text-white/60 hover:text-white">
           BACK
         </Link>
-        <div className="text-sm text-white/60">
-          ENDLESS ARCADE
+        <div className="flex items-center gap-4">
+          <Link href="/vault" className="text-sm text-white/60 hover:text-white">
+            VAULT
+          </Link>
+          <div className="text-sm text-white/60">
+            ENDLESS ARCADE
+          </div>
         </div>
       </nav>
 
@@ -73,7 +78,7 @@ export default function EndlessPage() {
         <HUDOverlay state={state} />
 
         <div className="relative w-full max-w-4xl h-[400px]">
-          <BallSpawner
+          <BallStage
             ball={isPlaying ? currentBall : null}
             isActive={isPlaying}
             onMiss={() => {

@@ -40,6 +40,12 @@ export default function HomePage() {
           >
             START GAME
           </Link>
+          <Link
+            href="/vault"
+            className="px-8 py-4 rounded-full border border-white/20 text-white font-bold hover:bg-white/10 transition-colors text-lg"
+          >
+            VAULT
+          </Link>
         </div>
       </main>
 
