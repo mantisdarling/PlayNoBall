@@ -1,14 +1,14 @@
 /**
- * Trophy Vault page.
- * Displays the persistent collection of unlocked 3D balls.
- * Players can inspect and rotate each unlocked ball freely.
+ * Vault page — redirects to Collection showcase.
  */
-import { TrophyVault } from "@/components/vault/TrophyVault"
+"use client"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 export default function VaultPage() {
-  return (
-    <div className="min-h-screen bg-[#0a0a0f]">
-      <TrophyVault />
-    </div>
-  )
+  const router = useRouter()
+  useEffect(() => {
+    router.replace("/showcase")
+  }, [router])
+  return null
 }

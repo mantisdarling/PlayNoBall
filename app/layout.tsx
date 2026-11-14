@@ -3,6 +3,7 @@
  * Wraps all pages with the document structure and shared styles.
  */
 import "./globals.css"
+import { TopNav } from "@/components/ui/TopNav"
 
 export const metadata = {
   title: "No Ball",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#0a0a0f] text-white font-sans min-h-screen">
+        <TopNav />
         {children}
       </body>
     </html>
