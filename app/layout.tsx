@@ -2,6 +2,8 @@
  * Root layout for No Ball.
  * Wraps all pages with the document structure and shared styles.
  */
+import "./globals.css"
+
 export const metadata = {
   title: "No Ball",
   description: "Guess the iconic sports ball",

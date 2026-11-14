@@ -63,7 +63,7 @@ export function TrophyVault() {
         </div>
 
         <div className="mt-8 text-xs text-white/40 font-mono uppercase tracking-widest">
-          play noball event planner dhaka bangladesh
+          play noball
         </div>
       </div>
     </div>
