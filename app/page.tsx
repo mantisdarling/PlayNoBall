@@ -70,22 +70,38 @@ export default function HomePage() {
         <div className="text-2xl font-bold tracking-tighter letter-spacing-wider">
           NO BALL
         </div>
-        <div className="flex items-center gap-4">
-          <Link href="/vault" className="text-sm text-white/60 hover:text-white">
-            VAULT
-          </Link>
+        <div className="text-sm text-white/60">
+          BROADCAST SPORTS ANALYTICS
         </div>
       </nav>
 
       <main className="flex-1 flex flex-col items-center justify-center px-4">
-        <h1 className="text-8xl font-black tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-accent">
+        <h1 className="text-8xl font-black tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-accent">
           NO BALL
         </h1>
-        <div className="text-sm text-white/60 mb-8">BROADCAST SPORTS ANALYTICS</div>
+        <p className="text-xl text-white/60 mb-12 max-w-2xl text-center">
+          Identify iconic sports balls in flight. Guess the name tournament
+          or year before the ball disappears.
+        </p>
 
         <ModeToggle mode={mode} onModeChange={setMode} />
 
-        <div className="relative w-full max-w-4xl h-[400px] mt-8">
+        <div className="mt-12 flex gap-4">
+          <button
+            onClick={startRound}
+            className="px-8 py-4 rounded-full bg-accent text-white font-bold hover:bg-accent/80 transition-colors text-lg"
+          >
+            START GAME
+          </button>
+          <Link
+            href="/vault"
+            className="px-8 py-4 rounded-full border border-white/20 text-white font-bold hover:bg-white/10 transition-colors text-lg"
+          >
+            VAULT
+          </Link>
+        </div>
+
+        <div className="relative w-full max-w-4xl h-[400px] mt-12">
           <HUDOverlay state={state} />
 
           <BallStage
@@ -117,6 +133,10 @@ export default function HomePage() {
           </button>
         )}
       </main>
+
+      <footer className="mt-auto px-6 py-8 text-xs text-white/40">
+        NO BALL
+      </footer>
     </div>
   )
 }
