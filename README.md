@@ -91,23 +91,6 @@ Open http://localhost:3000 in your browser.
 npm run build
 npm run start
 ```
-
-## Deploy to Cloudflare Pages
-
-1. Log into Cloudflare Dashboard
-2. Navigate to Workers and Pages Create application
-3. Pages Connect to Git
-4. Select repository https://github.com/mantisdarling/PlayNoBall
-5. Configure build settings:
-   - Framework preset: None
-   - Build command: Leave empty
-   - Build output directory: . root
-6. Click Save and Deploy
-
-## Zero Dash Rule
-
-This project follows a zero hyphen rule. No hyphens en dashes or em dashes appear in visible website text code comments custom identifiers or UI labels. Tailwind CSS utility classes use standard hyphenated syntax which is exempt from this rule.
-
 ## License
 
 Copyright 2026 Play No Ball. All rights reserved.
